@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Recommendation System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>🎵 Song Recommendation System</h2>
+    <p>Enter a song name to get 6 similar songs based on genre</p>
+
+    <form action="/recommend" method="post">
+        <input 
+            type="text" 
+            name="song_name" 
+            required
+        >
+        <button type="submit">Recommend Songs</button>
+    </form>
+</div>
+
+</body>
+</html>

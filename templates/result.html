@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommended Songs</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="card">
+
+{% if error %}
+    <h3 class="error">{{ error }}</h3>
+    <a class="back" href="/">⬅ Try Again</a>
+{% else %}
+    <h2>🎧 Recommended Songs</h2>
+
+    <p><b>Input Song:</b> {{ input_song }}</p>
+    <p><b>Detected Genre:</b> {{ genre }}</p>
+
+    <table>
+        <tr>
+            <th>Song</th>
+            <th>Artist</th>
+            <th>Album</th>
+            <th>Year</th>
+        </tr>
+
+        {% for song in songs %}
+        <tr>
+            <td>{{ song[0] }}</td>
+            <td>{{ song[1] }}</td>
+            <td>{{ song[2] }}</td>
+            <td>{{ song[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a class="back" href="/">⬅ Back</a>
+{% endif %}
+
+</div>
+
+</body>
+</html>
